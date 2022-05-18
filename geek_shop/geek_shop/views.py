@@ -1,9 +1,21 @@
 from django.shortcuts import render
 
+from productapp.models import Product
+
 
 def index(request):
-    return render(request, 'geek_shop/index.html')
+    products = Product.objects.all()[:4]
+
+    context = {
+        'title': 'Магазин',
+        'products': products,
+    }
+
+    return render(request, 'geek_shop/index.html', context)
 
 
 def contacts(request):
-    return render(request, 'geek_shop/contact.html')
+    context = {
+        'title': 'контакты'
+    }
+    return render(request, 'geek_shop/contact.html', context)

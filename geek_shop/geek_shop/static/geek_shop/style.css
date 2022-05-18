@@ -83,8 +83,9 @@ html, body {
 .basket {
 	display: block;
 	width: 23px;
-	height: 23px;	
+	height: 23px;
 	background-image: url(img/basket.png);
+	opacity: 100%;
 	position: absolute;
 	top: 63px;
 	left: 1210px;
