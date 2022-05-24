@@ -1,0 +1,56 @@
+[
+  {
+      "category": "Диваны",
+      "name": "Диван Оксфорд",
+      "image": "products_images/product-3-sm.jpg",
+      "short_desc": "Мягкий диван",
+      "description": "",
+      "price": "1450.00",
+      "quantity": 101
+  },
+  {
+      "category": "Стулья",
+      "name": "Удобный стул",
+      "image": "products_images/product-4.jpg",
+      "short_desc": "Очень удобный стул",
+      "description": "",
+      "price": "1450.00",
+      "quantity": 12
+  },
+  {
+      "category": "Свет",
+      "name": "Лампа Сфера",
+      "image": "products_images/product-1.jpg",
+      "short_desc": "Уникальный дизайн",
+      "description": "",
+      "price": "2500.00",
+      "quantity": 32
+  },
+  {
+      "category": "Кресла",
+      "name": "Кресла двойка",
+      "image": "products_images/product-2.jpg",
+      "short_desc": "Удобное кресло для всех",
+      "description": "",
+      "price": "15000.00",
+      "quantity": 15
+  },
+  {
+      "category": "Свет",
+      "name": "Настенная лампа",
+      "image": "products_images/product-2-sm.jpg",
+      "short_desc": "Уникальный дизайн",
+      "description": "",
+      "price": "3500.00",
+      "quantity": 54
+  },
+  {
+      "category": "Свет",
+      "name": "Настольная лампа",
+      "image": "products_images/product-31.jpg",
+      "short_desc": "Нежный ламповый свет",
+      "description": "",
+      "price": "12000.00",
+      "quantity": 4
+  }
+]

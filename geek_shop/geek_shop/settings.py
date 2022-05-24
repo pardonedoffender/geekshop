@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-f3n&k&t50(=8(lx-hl_l4kls9$f&d95__2*&!)0cqr0g5@da6+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'productapp',
+    'authapp',
+    'basketapp',
 ]
+
+AUTH_USER_MODEL = 'authapp.ShopUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

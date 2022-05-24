@@ -1,0 +1,36 @@
+import json
+import os.path as os
+
+from django.core.management.base import BaseCommand
+
+from authapp.models import ShopUser
+from productapp.models import ProductCategory, Product
+
+JSON_PATH = 'productapp/jsons'
+
+
+def load_from_json(filename):
+    with open(os.join(JSON_PATH, filename + '.json'), 'r') as infile:
+        return json.load(infile)
+
+
+class Command(BaseCommand):
+    def handle(self, *args, **options):
+        categories = load_from_json('categories')
+
+        ProductCategory.objects.all().delete()
+        for category in categories:
+            new_category = ProductCategory(**category)
+            new_category.save()
+
+        products = load_from_json('products')
+
+        Product.objects.all().delete()
+        for product in products:
+            category_name = product['category']
+            _category = ProductCategory.objects.get(name=category_name)
+            product['category'] = _category
+            new_product = Product(**product)
+            new_product.save()
+
+        ShopUser.objects.create_superuser('admin', 'admin@django.com', '123', age=28)
