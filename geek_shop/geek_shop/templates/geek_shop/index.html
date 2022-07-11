@@ -20,9 +20,10 @@
                 <a class="active" href="#">Популярные</a><a href="#">Новинки</a>
         </div>
         <a class="explore" href="#">показать все <img src="{% static 'geek_shop/img/arrow.png' %}" alt=""></a>
-        <div class="clearfix">
-        </div>
+        <div class="clearfix"></div>
+
         <div class="tab-content">
+
             {% for product in products %}
                 <div class="block">
                     <a href="{% url 'basket:add' product.pk %}"><img src="/media/{{ product.image }}" alt="">
@@ -34,6 +35,7 @@
                     </a>
                 </div>
             {% endfor %}
+
         </div>
     </div>
 {% endblock %}

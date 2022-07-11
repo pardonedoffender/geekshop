@@ -1,0 +1,72 @@
+{% extends 'geek_shop/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="hero-white">
+        {% include 'geek_shop/includes/header.html' %}
+    </div>
+
+    <div class="details">
+
+        {% include 'productapp/includes/inc_menu.html' %}
+
+        <div class="details-products">
+
+            <div class="details-slider">
+
+                <div class="slider-product">
+                    <img src="/media/{{ product.image }}">
+                </div>
+
+                <div class="slider-control">
+                    <div class="block">
+                        <a href="#"><img src="{% static 'geek_shop/img/controll.jpg' %}" alt="">
+                            <div class="text"></div>
+                        </a>
+                     </div>
+                    <div class="block">
+                        <a href="#"><img src="{% static 'geek_shop/img/controll1.jpg' %}" alt="">
+                            <div class="text"></div>
+                        </a>
+                    </div>
+                    <div class="block">
+                        <a href="#"><img src="{% static 'geek_shop/img/controll2.jpg' %}" alt="">
+                            <div class="text"></div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="description">
+                <h3 class="big-bold">{{ product.name }}</h3>
+                <p class="price"> {{ product.price }} <span>руб</span></p>
+                <a href="{% url 'basket:add' product.pk %}" class="red-button">
+                    заказать <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <div class="description-text">
+                    {{ product.short_desc }}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="category_products products">
+
+            {% for product in some_products %}
+                <div class="block">
+                    <a href="#">
+                        <img src="/media/{{ product.image }}" alt="">
+                        <div class="text">
+                            <img src="{% static 'geek_shop/img/icon-hover.png' %}" alt="img">
+                            <h4>{{ product.name }}</h4>
+                            <p>{{ product.short_desc }}</p>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+{% endblock %}

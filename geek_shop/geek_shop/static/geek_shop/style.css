@@ -82,9 +82,9 @@ html, body {
 }
 .basket {
 	display: block;
-	width: 23px;
+	width: 150px;
 	height: 23px;
-	background-image: url(img/basket.png);
+	/*background-image: url(img/basket.png);*/
 	opacity: 100%;
 	position: absolute;
 	top: 63px;
@@ -123,7 +123,7 @@ html, body {
 	font-size: 17px;
 	font-weight: 700;
 	line-height: 45px;
-	margin-top: 32px; 
+	margin-top: 32px;
 	letter-spacing: 3px;
 }
 .button-order:hover {
@@ -370,6 +370,7 @@ html, body {
 .trending-products .block a img {
 	float: left;
 }
+
 .trending-products .block {
 	float: left;
 	margin: 15px;
